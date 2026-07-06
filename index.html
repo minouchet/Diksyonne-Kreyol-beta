@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traduction Créole Guadeloupéen ↔ Français – Dictionnaire</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#ffcc00">
+
+    <meta name="description" content="Mofwazé Kréyòl Gwadloupéyen ↔ Fransé. Ou pé touvé mo kréyòl, mofwazaj, ègzanp é sinonim. Sé on zouti senp pour aprann kréyòl gwadloupéyen.">
+
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-512.png">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-title">
+        <img src="icons/logo-header.png" alt="Logo" class="header-logo">
+        <h1>Mofwazé Kréyòl Gwadloupéyen ↔ Fransé</h1>
+    </div>
+    <p>Traducteur Créole Guadeloupéen ↔ Français</p>
+</header>
+
+<div class="search-container">
+  <div class="search-row">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Maké on mo kréyòl oben fransé…">
+      <span id="clearSearch" class="clear-btn">✕</span>
+
+      <!-- suggestions MUST be inside .search-bar so their absolute positioning is relative to it -->
+      <div id="suggestions" class="suggestions" aria-label="Suggestions"></div>
+    </div>
+
+    <div class="search-buttons">
+      <button id="searchBtn" class="search-btn">Chèché</button>
+    </div>
+  </div>
+
+  <div class="show-all-container" style="margin-top:8px; text-align:center;">
+    <button id="showAllBtn" class="showall-btn">Montré tout sé mo-la</button>
+  </div>
+</div>
+
+<!-- Résultats -->
+<div id="results"></div>
+
+<!-- Pagination -->
+<div id="pagination" style="max-width:800px;margin:12px auto 40px auto;text-align:center;"></div>
+
+<footer>
+    Si ou ka vwè on érè oswa si ou vlé ranjé kréyòl a-w, ou pé alé li "Dictionnaire Créole Guadeloupéen/Français", Editions Orphie, 2013, ékri pa Danièle Bernini-Montbrand, Ralph Ludwig, Hector Poullet, é Sylviane Telchid.
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
